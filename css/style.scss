@@ -1,0 +1,40 @@
+@import "variables";
+@import "btnvariables";
+@import "mathCal";
+@import "map";
+body{
+    font-family: $font-family;
+    font-size: $base-font-size;
+}
+h2{
+   // color:$primary-color;
+   color:map-get($colors , "primary")
+}
+//nested
+nav{
+    background-color: #222;
+    padding: 10px;
+    a{
+        text-decoration: none;
+        display: inline-block;
+        padding-block-end: 5px 10px;
+        color: #fff;
+        &:last-child{
+            color: #ffd000;
+        }
+        &:nth-child(2){
+            color: red;
+        }
+        &:hover{
+            color: greenyellow;
+        }
+    }
+}
+
+p{
+    line-height: 20px;
+    a{
+        text-decoration: none;
+        color: tomato;
+    }
+}

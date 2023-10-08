@@ -1,0 +1,45 @@
+$bg-primarycolor:#3498db;
+$bg-primarywin:#198754;
+$bg-primarylose:#dc3545;
+
+.btn{
+    border:none;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+.btn-primary{
+    background-color: $bg-primarycolor;
+    color: white;
+}
+.btn-win{
+    background-color: $bg-primarywin;
+    color: white;
+}
+.btn-lose{
+    background-color: $bg-primarylose;
+    color: white;
+    
+}
+
+@mixin button($back-color,$text-color){
+    background-color: $back-color;
+    color:$text-color;
+    border-radius: 5px;
+
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    &:hover{
+        background-color: darken($back-color,10%);
+    }
+}
+
+.button-primary{
+    @include button(#7aa4ba, white)
+}
+.button-win{
+    @include button(red, white)
+}
+.button-lose{
+    @include button(green, white)
+}
